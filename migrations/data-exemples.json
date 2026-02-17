@@ -1,0 +1,73 @@
+{
+  "users": [
+    {
+      "username": "Admin",
+      "email": "admin@choco.com",
+      "password": "123456",
+      "role": "admin"
+    },
+    {
+      "username": "Sophie",
+      "email": "sophie@test.com",
+      "password": "123456",
+      "role": "customer"
+    },
+    {
+      "username": "Thomas",
+      "email": "thomas@test.com",
+      "password": "123456",
+      "role": "customer"
+    }
+  ],
+  "products": [
+    {
+      "nom": "Tablette Pistache Dubaï au chocolat au lait",
+      "prix": 15.9,
+      "stock": 50,
+      "slug": "pistache-dubai",
+      "description": "Découvrez par vous-même ce phénomène viral. Une généreuse tablette de chocolat au lait onctueux (220 g), fourrée d'un mélange irrésistible de crème de pistache, de sésame et de vermicelles Kataifi croustillants. Un délice artisanal à l'état pur."
+    },
+    {
+      "nom": "Tablette Pistache Dubaï au chocolat blanc",
+      "prix": 15.9,
+      "stock": 50,
+      "slug": "tahini-caramel",
+      "description": "Pour les vrais gourmands : la sensation virale enrobée de chocolat blanc crémeux. Une barre généreuse (220g), richement fourrée de crème de pistache, de sésame et de cheveux d'ange Kataifi croustillants. Le goût le plus doux avec le croquant le plus fort."
+    },
+    {
+      "nom": "Tablette Bueno Dubaï",
+      "prix": 15.9,
+      "stock": 50,
+      "slug": "bueno",
+      "description": "Le goût familier de la crème de noisette dans un écrin de luxe. Une barre généreuse de chocolat au lait, richement fourrée d'une garniture soyeuse à la noisette. Décorée de traits artistiques de chocolat blanc et noir. Crémeux, familier et irrésistible."
+    },
+    {
+      "nom": "Tablette Brownie Dubaï",
+      "prix": 15.9,
+      "stock": 50,
+      "slug": "brownie",
+      "description": "Une fête en barre. Chocolat au lait crémeux fourré de caramel tendre et de crumble au cacao croquant. Fini avec des accents ludiques de chocolat bleu et rose. La friandise ultime pour les amateurs de brownies."
+    },
+    {
+      "nom": "Tablette Beurre de cacahuète Dubaï",
+      "prix": 15.9,
+      "stock": 50,
+      "slug": "cacahuète",
+      "description": "Le rêve ultime pour les amateurs de beurre de cacahuète. Une barre de chocolat au lait richement garnie avec un cœur de vrai beurre de cacahuète, de caramel collant et de flocons croustillants. Décorée d'accents jaune-rouge ardents. Salé, sucré et croustillant en une seule bouchée."
+    },
+    {
+      "nom": "Tablette pistache Dubaï au chocolat noire",
+      "prix": 15.9,
+      "stock": 50,
+      "slug": "choco-noire",
+      "description": "Vivez la sensation virale dans sa forme la plus intense. Une barre généreuse de chocolat noir (220g), richement garnie du célèbre mélange de crème de pistache, de sésame et de nouilles Kataifi croustillantes. Un parfait contraste entre l'amer et le sucré."
+    },
+    {
+      "nom": "Tablette Dubaï au lait",
+      "prix": 15.9,
+      "stock": 50,
+      "slug": "lait",
+      "description": "Une touche unique à la tendance virale. Chocolat au lait crémeux fourré du célèbre mélange de pistaches, de Kataifi croustillant et de doux fils de sucre. Décoré de manière festive avec des boucles de chocolat vert et noir."
+    }
+  ]
+}
