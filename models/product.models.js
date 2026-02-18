@@ -5,9 +5,9 @@ class Product extends Model {}
 
 Product.init(
   {
-    nom: { type: DataTypes.STRING, allowNull: false },
+    name: { type: DataTypes.STRING, allowNull: false },
     description: { type: DataTypes.TEXT },
-    prix: { type: DataTypes.DECIMAL(10, 2), allowNull: false },
+    price: { type: DataTypes.DECIMAL(10, 2), allowNull: false },
     stock: { type: DataTypes.INTEGER, defaultValue: 0 },
     image: { type: DataTypes.STRING },
     slug: { type: DataTypes.STRING, unique: true },
