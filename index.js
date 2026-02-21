@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import { sequelize } from "./models/index.js";
 import productRouter from "./routers/product.router.js";
 import authRouter from "./routers/auth.router.js";
+import orderRouter from "./routers/order.router.js";
 
 const app = express();
 app.use(cors()); // On laisse ouvert pour l'instant ... a modifier pars la suite !
@@ -11,13 +12,14 @@ app.use(express.json());
 
 app.use(productRouter);
 app.use(authRouter);
+app.use(orderRouter);
 
 const PORT = process.env.PORT || 5000;
 const startServer = async () => {
   try {
     // On vérifie la connexion et on synchronise les tables
     await sequelize.authenticate();
-    await sequelize.sync({ alter: true });
+    await sequelize.sync();
     console.log("✅ Connexion à MySQL réussie et tables synchronisées !");
 
     // On lance le serveur
@@ -32,6 +34,6 @@ const startServer = async () => {
 
 app.use((err, req, res, next) => {
   console.error("🔥 Erreur détectée :", err.message);
-  res.status(err.status || 500).json({ error: err.message });
+  res.status(err.status || 500).json({ message: err.message });
 });
 startServer();

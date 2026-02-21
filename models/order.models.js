@@ -12,9 +12,13 @@ Order.init(
     },
     status: {
       type: DataTypes.ENUM("pending", "paid", "shipped", "cancelled"),
-      defaultValue: "pending", // En attente par défaut
+      defaultValue: "pending",
     },
-    // Pas besoin de mettre userId ici, Sequelize le fera via les relations !
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      field: "userId",
+    },
   },
   {
     sequelize,

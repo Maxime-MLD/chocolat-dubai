@@ -15,6 +15,19 @@ router.post(
   validateProduct,
   myController.createProduct,
 );
+router.put(
+  "/products/:slug",
+  validateToken,
+  isAdmin,
+  validateProduct, // Optionnel : pour vérifier que le nouveau prix/nom est correct
+  myController.updateProduct,
+);
+router.delete(
+  "/products/:slug",
+  validateToken,
+  isAdmin,
+  myController.deleteProduct,
+);
 // router.post("/products", validateProduct, productController.createProduct);
 // router.get("/products/:id", myController.getOneProduct);
 

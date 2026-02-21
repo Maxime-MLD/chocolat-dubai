@@ -6,11 +6,11 @@ import OrderItem from "./orderItem.models.js";
 
 // --- DÉFINITION DES RELATIONS ---
 
-// 1. Un utilisateur a plusieurs commandes
+// Un utilisateur peut avoir plusieurs commandes
 User.hasMany(Order, { foreignKey: "userId", as: "order" });
 Order.belongsTo(User, { foreignKey: "userId", as: "user" });
 
-// 2. Une commande contient plusieurs produits...
+// Une commande contient plusieurs produits...
 // ...et un produit peut être dans plusieurs commandes.
 // On passe par la table intermédiaire "OrderItem"
 Order.belongsToMany(Product, {
