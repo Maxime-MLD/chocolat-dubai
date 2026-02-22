@@ -3,8 +3,13 @@ import { Order, Product } from "../models/index.js";
 class OrderController {
   createOrder = async (req, res, next) => {
     try {
-      console.log("1. Début de la commande");
       const { items } = req.body;
+      // Si on a un panier vide, message d'erreur
+      if (!items || !Array.isArray(items) || items.length === 0) {
+        return res.status(400).json({
+          message: "Votre panier est vide. Impossible de passer commande.",
+        });
+      }
       const userId = req.user.user_id || req.user.id;
 
       // Création de la commande initiale
@@ -78,7 +83,14 @@ class OrderController {
       const userId = req.user.user_id || req.user.id;
       const orders = await Order.findAll({
         where: { userId: userId },
-        include: Product,
+        include: [
+          {
+            model: Product,
+            as: "product",
+            through: { attributes: ["quantity", "price"] },
+          },
+        ],
+        order: [["createdAt", "DESC"]],
       });
       res.json(orders);
     } catch (error) {

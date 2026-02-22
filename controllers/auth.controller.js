@@ -36,6 +36,7 @@ class AuthController {
     }
   };
 
+  // Connexion user
   login = async (req, res, next) => {
     try {
       const dataJson = req.body;
