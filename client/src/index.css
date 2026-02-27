@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Inter:wght@300;400;600&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --font-arabic: "Aref Ruqaa", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --color-dxb-gold: #9a6735;
+  --color-dxb-dark: #2d1b14;
+  --color-dxb-cream: #faf7f2;
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(180deg, rgba(154, 103, 53, 0.2) 0%, #9a6735 100%);
+}
+
+@layer base {
+  /* 1. Applique la police simple (Inter) à tout le site par défaut */
+  body {
+    @apply font-sans antialiased text-dxb-dark;
+  }
+
+  /* 2. Applique la police "Arabe" (Aref Ruqaa) à tous les titres automatiquement */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-arabic tracking-wide;
+  }
+}
